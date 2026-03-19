@@ -1,1 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
+body {
+    /* Aplica a imagem de fundo enviada */
+    background: url('image 1 (1).png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 95%;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 4rem; /* Tamanho grande como na foto */
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.content {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente texto e imagem */
+    gap: 30px; /* Espaço exato entre imagem e texto */
+    margin-bottom: 60px;
+}
+
+.product-image {
+    flex: 0,9999;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-image img {
+    max-width: 500px; /* Tamanho proporcional ao layout */
+    height: auto;
+    /* Sombras para dar profundidade se o PNG for transparente */
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.product-info {
+    flex: 1.5;
+    padding-right: 50px;
+}
+
+.product-info h2 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    text-align: left; /* Alinhamento conforme a imagem original */
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+footer {
+    padding-left: 10%; /* Alinha os contatos mais à esquerda */
+}
+
+footer p {
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 850px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .product-image {
+        justify-content: center;
+    }
+
+    .product-info {
+        padding-right: 0;
+    }
+
+    footer {
+        padding-left: 10;
+        text-align: left;
+    }
+}
